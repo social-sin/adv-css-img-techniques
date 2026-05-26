@@ -1,145 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Advanced CSS Principles</title>
+  <title>Advanced Object-Fit & Cropping</title>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="hero">
-    <h1>Advanced CSS Principles</h1>
+  <header class="hero-header">
+    <h1>Advanced Object-Fit & Image Cropping</h1>
 
     <p>
-      Design systems, layout logic, spacing rhythm,
-      proportion, and scalable visual structure.
+      Explore responsive image cropping, object-fit,
+      object-position, aspect ratios, and gallery layouts.
     </p>
   </header>
 
-  <!-- DESIGN SYSTEM -->
-  <section class="section">
-    <h2>Design System Thinking</h2>
+  <!-- STRETCH PROBLEM -->
+  <section class="card">
+    <h2>Image Stretching Problem</h2>
 
-    <div class="card-grid">
+    <div class="comparison-grid">
 
-      <article class="card">
-        <h3>Typography Scale</h3>
+      <div>
+        <h3>Without object-fit</h3>
 
-        <p>
-          Repeating heading sizes creates hierarchy
-          and visual consistency across layouts.
-        </p>
-      </article>
+        <img
+          src="https://picsum.photos/id/1015/800/500"
+          alt="Stretched image example"
+          class="stretch"
+        >
+      </div>
 
-      <article class="card">
-        <h3>Spacing System</h3>
+      <div>
+        <h3>With object-fit: cover</h3>
 
-        <p>
-          Consistent spacing improves rhythm,
-          readability, and structural clarity.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Reusable Components</h3>
-
-        <p>
-          Shared styles reduce arbitrary decisions
-          and create scalable interfaces.
-        </p>
-      </article>
+        <img
+          src="https://picsum.photos/id/1015/800/500"
+          alt="Proper cropped image example"
+          class="cover"
+        >
+      </div>
 
     </div>
   </section>
 
-  <!-- LAYOUT LOGIC -->
-  <section class="section">
-    <h2>Layout Logic</h2>
+  <!-- OBJECT POSITION -->
+  <section class="card">
+    <h2>object-position Focus Control</h2>
 
-    <div class="layout-demo">
+    <div class="comparison-grid">
 
-      <div class="sidebar">
-        <h3>Sidebar</h3>
+      <div>
+        <h3>Center Focus</h3>
 
-        <p>
-          Related navigation and supporting content.
-        </p>
+        <img
+          src="https://picsum.photos/id/1027/600/800"
+          alt="Centered portrait"
+          class="portrait center-focus"
+        >
       </div>
 
-      <main class="content">
-        <h3>Main Content</h3>
+      <div>
+        <h3>Top Focus</h3>
 
-        <p>
-          Strong layout systems separate content into
-          clear structural regions with predictable spacing.
-        </p>
-
-        <p>
-          Alignment and grouping help users scan
-          information naturally.
-        </p>
-      </main>
+        <img
+          src="https://picsum.photos/id/1027/600/800"
+          alt="Top aligned portrait"
+          class="portrait top-focus"
+        >
+      </div>
 
     </div>
   </section>
 
-  <!-- VISUAL RHYTHM -->
-  <section class="section">
-    <h2>Visual Rhythm</h2>
+  <!-- ASPECT RATIO -->
+  <section class="card">
+    <h2>Aspect Ratio Cropping</h2>
 
-    <div class="rhythm-stack">
-
-      <div class="rhythm-box large"></div>
-      <div class="rhythm-box medium"></div>
-      <div class="rhythm-box small"></div>
-      <div class="rhythm-box medium"></div>
-      <div class="rhythm-box large"></div>
-
-    </div>
-
-    <p class="rhythm-text">
-      Repeating spacing and proportional relationships
-      creates visual flow and stability.
-    </p>
-  </section>
-
-  <!-- PROPORTION -->
-  <section class="section">
-    <h2>Proportion & Scale</h2>
-
-    <div class="scale-demo">
-
-      <h1>Heading One</h1>
-      <h2>Heading Two</h2>
-      <h3>Heading Three</h3>
-      <p>Paragraph text establishes readable body content.</p>
-
+    <div class="aspect-wrapper">
+      <img
+        src="https://picsum.photos/id/1043/1000/600"
+        alt="16 by 9 landscape"
+      >
     </div>
   </section>
 
-  <!-- PATTERN REPETITION -->
-  <section class="section">
-    <h2>Pattern Repetition</h2>
+  <!-- GALLERY -->
+  <section class="card">
+    <h2>Responsive Gallery</h2>
 
-    <div class="pattern-grid">
+    <div class="gallery">
 
-      <div class="pattern-card">
-        <h3>Card Pattern</h3>
-        <p>Repeating visual structures improves usability.</p>
-      </div>
+      <img
+        src="https://picsum.photos/id/1050/600/800"
+        alt="Gallery image"
+      >
 
-      <div class="pattern-card">
-        <h3>Card Pattern</h3>
-        <p>Users learn interfaces through repetition.</p>
-      </div>
+      <img
+        src="https://picsum.photos/id/1060/900/600"
+        alt="Gallery image"
+      >
 
-      <div class="pattern-card">
-        <h3>Card Pattern</h3>
-        <p>Consistency creates predictability and rhythm.</p>
-      </div>
+      <img
+        src="https://picsum.photos/id/1074/700/700"
+        alt="Gallery image"
+      >
+
+      <img
+        src="https://picsum.photos/id/1084/800/500"
+        alt="Gallery image"
+      >
+
+    </div>
+  </section>
+
+  <!-- FILTER + OBJECT FIT -->
+  <section class="card">
+    <h2>Filters + Object Fit</h2>
+
+    <img
+      src="https://picsum.photos/id/1067/1200/700"
+      alt="Filtered feature image"
+      class="feature-image"
+    >
+  </section>
+
+  <!-- HERO BANNER -->
+  <section class="card">
+    <h2>Cropped Hero Banner</h2>
+
+    <div class="hero-banner">
+
+      <img
+        src="https://picsum.photos/id/1036/1600/900"
+        alt="Hero banner image"
+      >
+
+    </div>
+  </section>
+
+  <!-- SQUARE GRID -->
+  <section class="card">
+    <h2>Square Grid Layout</h2>
+
+    <div class="square-grid">
+
+      <img
+        src="https://picsum.photos/id/1011/700/500"
+        alt="Square crop"
+      >
+
+      <img
+        src="https://picsum.photos/id/1012/500/900"
+        alt="Square crop"
+      >
+
+      <img
+        src="https://picsum.photos/id/1013/1000/600"
+        alt="Square crop"
+      >
+
+      <img
+        src="https://picsum.photos/id/1016/800/1200"
+        alt="Square crop"
+      >
 
     </div>
   </section>
